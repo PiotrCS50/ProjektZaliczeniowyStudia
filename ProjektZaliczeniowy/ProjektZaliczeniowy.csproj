@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1E977461-565E-4455-8A67-A810F072E697}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ProjektZaliczeniowy</RootNamespace>
+    <AssemblyName>ProjektZaliczeniowy</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BazaSklepKomputerowy.cs" />
+    <Compile Include="DaneUzytkownikaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DaneUzytkownikaForm.Designer.cs">
+      <DependentUpon>DaneUzytkownikaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DodajMagazynForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DodajMagazynForm.Designer.cs">
+      <DependentUpon>DodajMagazynForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DodajProduktForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DodajProduktForm.Designer.cs">
+      <DependentUpon>DodajProduktForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doladuj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doladuj.Designer.cs">
+      <DependentUpon>Doladuj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EdytujProduktForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EdytujProduktForm.Designer.cs">
+      <DependentUpon>EdytujProduktForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormValidator.cs" />
+    <Compile Include="IDataRepository.cs" />
+    <Compile Include="IWalidacjaFormluarza.cs" />
+    <Compile Include="Kategoria.cs" />
+    <Compile Include="Koszyk.cs" />
+    <Compile Include="LogowanieForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogowanieForm.Designer.cs">
+      <DependentUpon>LogowanieForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Magazyn.cs" />
+    <Compile Include="MenedzerKategorii.cs" />
+    <Compile Include="Migrations\202206011303497_Final_1.cs" />
+    <Compile Include="Migrations\202206011303497_Final_1.designer.cs">
+      <DependentUpon>202206011303497_Final_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206031808484_AddSuma.cs" />
+    <Compile Include="Migrations\202206031808484_AddSuma.designer.cs">
+      <DependentUpon>202206031808484_AddSuma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206061107244_AddingHmac.cs" />
+    <Compile Include="Migrations\202206061107244_AddingHmac.designer.cs">
+      <DependentUpon>202206061107244_AddingHmac.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="PozycjaKoszyka.cs" />
+    <Compile Include="PozycjaKoszykaDto.cs" />
+    <Compile Include="PozycjaMagazynu.cs" />
+    <Compile Include="PozycjaZamowienia.cs" />
+    <Compile Include="PozycjaZamowieniaDto.cs" />
+    <Compile Include="ProduktDto.cs" />
+    <Compile Include="RejestracjaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RejestracjaForm.Designer.cs">
+      <DependentUpon>RejestracjaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Repository.cs" />
+    <Compile Include="ResetHaslaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResetHaslaForm.Designer.cs">
+      <DependentUpon>ResetHaslaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SklepForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SklepForm.Designer.cs">
+      <DependentUpon>SklepForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KoszykForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KoszykForm.Designer.cs">
+      <DependentUpon>KoszykForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Produkt.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsunEdytujMagazynForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsunEdytujMagazynForm.Designer.cs">
+      <DependentUpon>UsunEdytujMagazynForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsunProduktForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsunProduktForm.Designer.cs">
+      <DependentUpon>UsunProduktForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uzytkownik.cs" />
+    <Compile Include="ZakupyZrealizowaneForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZakupyZrealizowaneForm.Designer.cs">
+      <DependentUpon>ZakupyZrealizowaneForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZamowieniaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZamowieniaForm.Designer.cs">
+      <DependentUpon>ZamowieniaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Zamowienie.cs" />
+    <Compile Include="ZamowienieDto.cs" />
+    <EmbeddedResource Include="DaneUzytkownikaForm.resx">
+      <DependentUpon>DaneUzytkownikaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DodajMagazynForm.resx">
+      <DependentUpon>DodajMagazynForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DodajProduktForm.resx">
+      <DependentUpon>DodajProduktForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doladuj.resx">
+      <DependentUpon>Doladuj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EdytujProduktForm.resx">
+      <DependentUpon>EdytujProduktForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KoszykForm.resx">
+      <DependentUpon>KoszykForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogowanieForm.resx">
+      <DependentUpon>LogowanieForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206011303497_Final_1.resx">
+      <DependentUpon>202206011303497_Final_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206031808484_AddSuma.resx">
+      <DependentUpon>202206031808484_AddSuma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206061107244_AddingHmac.resx">
+      <DependentUpon>202206061107244_AddingHmac.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RejestracjaForm.resx">
+      <DependentUpon>RejestracjaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResetHaslaForm.resx">
+      <DependentUpon>ResetHaslaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SklepForm.resx">
+      <DependentUpon>SklepForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UsunEdytujMagazynForm.resx">
+      <DependentUpon>UsunEdytujMagazynForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsunProduktForm.resx">
+      <DependentUpon>UsunProduktForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZakupyZrealizowaneForm.resx">
+      <DependentUpon>ZakupyZrealizowaneForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZamowieniaForm.resx">
+      <DependentUpon>ZamowieniaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Kategoria.datasource" />
+    <None Include="Properties\DataSources\Magazyn.datasource" />
+    <None Include="Properties\DataSources\PozycjaKoszykaDto.datasource" />
+    <None Include="Properties\DataSources\PozycjaZamowieniaDto.datasource" />
+    <None Include="Properties\DataSources\Produkt.datasource" />
+    <None Include="Properties\DataSources\ProduktDto.datasource" />
+    <None Include="Properties\DataSources\Uzytkownik.datasource" />
+    <None Include="Properties\DataSources\Zamowienie.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Ten projekt zawiera odwołania do pakietów NuGet, których nie ma na tym komputerze. Użyj przywracania pakietów NuGet, aby je pobrać. Aby uzyskać więcej informacji, zobacz http://go.microsoft.com/fwlink/?LinkID=322105. Brakujący plik: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
